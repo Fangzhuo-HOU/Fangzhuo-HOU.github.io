@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://example.com/2021/03/18/a%20real-time%20analyst%20bias/image/cffabdcdek1b5cf37ef8cef719ece54d.jpg">
 <meta property="og:image" content="http://example.com/2021/03/18/a%20real-time%20analyst%20bias/image/a390425bdt3ba615b0c2cc2e80313eea.jpg">
 <meta property="article:published_time" content="2021-03-18T05:03:02.734Z">
-<meta property="article:modified_time" content="2021-03-20T07:43:17.634Z">
+<meta property="article:modified_time" content="2021-03-20T11:17:27.593Z">
 <meta property="article:author" content="Fangzhuo HOU">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2021/03/18/a%20real-time%20analyst%20bias/image/cffabdcdek1b5cf37ef8cef719ece54d.jpg">
@@ -28,7 +28,7 @@
     <link rel="alternative" href="/atom.xml" title="柘九的个人主页" type="application/atom+xml">
   
   
-    <link rel="icon" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.jpg">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -68,8 +68,17 @@
 	        
 				<li><a href="/categories/">归档</a></li>
 	        
+				<li><a href="/404/">404公益</a></li>
+	        
 			</ul>
 		</nav>
+
+
+		<nav>
+			总文章数 1
+		</nav>
+
+
 		<nav class="header-smart-menu">
     		
     			
@@ -84,9 +93,11 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="mail" target="_blank" href="/11812411@mail.sustech.edu.cn" title="mail"><i class="icon-mail"></i></a>
+					<a class="mail" target="_blank" href="mailto:11812411@mail.sustech.edu.cn" title="mail"><i class="icon-mail"></i></a>
 		        
-					<a class="qq" target="_blank" href="/3335991445" title="qq"><i class="icon-qq"></i></a>
+					<a class="github" target="_blank" href="https://github.com/Fangzhuo-HOU" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="qq" target="_blank" href="https://user.qzone.qq.com/3335991445" title="qq"><i class="icon-qq"></i></a>
 		        
 					<a class="weixin" target="_blank" href="/zhejiu9" title="weixin"><i class="icon-weixin"></i></a>
 		        
@@ -120,14 +131,18 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="mail" target="_blank" href="/11812411@mail.sustech.edu.cn" title="mail"><i class="icon-mail"></i></a>
+						<a class="mail" target="_blank" href="mailto:11812411@mail.sustech.edu.cn" title="mail"><i class="icon-mail"></i></a>
 			        
-						<a class="qq" target="_blank" href="/3335991445" title="qq"><i class="icon-qq"></i></a>
+						<a class="github" target="_blank" href="https://github.com/Fangzhuo-HOU" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="qq" target="_blank" href="https://user.qzone.qq.com/3335991445" title="qq"><i class="icon-qq"></i></a>
 			        
 						<a class="weixin" target="_blank" href="/zhejiu9" title="weixin"><i class="icon-weixin"></i></a>
 			        
@@ -135,12 +150,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/categories/">归档</a></li>
+					<li style="width: 33.333333333333336%"><a href="/categories/">归档</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/404/">404公益</a></li>
 		        
 				</ul>
 			</nav>
@@ -179,7 +196,7 @@
 
 <p><em><font face="Times New Roman" size="5">Under the inspiration of the work by <a color="blue"> Binsbergen, J.H. van</a>, I construct a machine-leaning model to predict the net profit of A share listed company in Chine per month. The statistically optimal machine-leaning forecast has the same trend as analysts’ consensus forecast and the smaller error. And we can use it as the benchmark to get a real-time analyst bias which has a huge research value.</font></em></p>
 <span id="more"></span>
-<h1 id="Methodology"><a href="#Methodology" class="headerlink" title="Methodology"></a><font size="7" color="black">Methodology</font></h1><h2 id="XGBoot"><a href="#XGBoot" class="headerlink" title="XGBoot  "></a><font size="6" color="black">XGBoot  </font></h2><font face="Times New Roman" size="4">I use XGBoost to forecast the net profit. XGBoost can be viewed as an eXtreme version of Gradient Boosting Decision Tree(GBDT) which is an iterative decision tree algorithm with the strong ability of generalization for non-linear and non-parametric problem. XGBoost consists of multiple decision trees which forecast the residual (residual value = true value - predicted value), and each predicted value for the sample is the sum of all trees:</font>
+<h1 id="Methodology"><a href="#Methodology" class="headerlink" title="Methodology"></a><font size="7" color="black">Methodology</font></h1><h2 id="XGBoost"><a href="#XGBoost" class="headerlink" title="XGBoost  "></a><font size="6" color="black">XGBoost  </font></h2><font face="Times New Roman" size="4">I use XGBoost to forecast the net profit. XGBoost can be viewed as an eXtreme version of Gradient Boosting Decision Tree(GBDT) which is an iterative decision tree algorithm with the strong ability of generalization for non-linear and non-parametric problem. XGBoost consists of multiple decision trees which forecast the residual (residual value = true value - predicted value), and each predicted value for the sample is the sum of all trees:</font>
 $$
 \hat{y}_{i}=\sum_{k=1}^{K} f_{k}\left(x_{i}\right), f_{k} \in F
 $$
@@ -363,7 +380,7 @@ $$
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Methodology"><span class="toc-number">1.</span> <span class="toc-text">Methodology</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#XGBoot"><span class="toc-number">1.1.</span> <span class="toc-text">XGBoot  </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Net-profit-forecast"><span class="toc-number">1.2.</span> <span class="toc-text">Net profit forecast</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Macro-14-features"><span class="toc-number">1.3.</span> <span class="toc-text">Macro (14 features)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Industry-15-features"><span class="toc-number">1.4.</span> <span class="toc-text">Industry (15 features)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fundamentals-232-features"><span class="toc-number">1.5.</span> <span class="toc-text">Fundamentals (232 features)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Analyst-1-features"><span class="toc-number">1.6.</span> <span class="toc-text">Analyst(1 features)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Result"><span class="toc-number">2.</span> <span class="toc-text">Result</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-number">3.</span> <span class="toc-text"> Reference</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Methodology"><span class="toc-number">1.</span> <span class="toc-text">Methodology</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#XGBoost"><span class="toc-number">1.1.</span> <span class="toc-text">XGBoost  </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Net-profit-forecast"><span class="toc-number">1.2.</span> <span class="toc-text">Net profit forecast</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Macro-14-features"><span class="toc-number">1.3.</span> <span class="toc-text">Macro (14 features)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Industry-15-features"><span class="toc-number">1.4.</span> <span class="toc-text">Industry (15 features)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fundamentals-232-features"><span class="toc-number">1.5.</span> <span class="toc-text">Fundamentals (232 features)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Analyst-1-features"><span class="toc-number">1.6.</span> <span class="toc-text">Analyst(1 features)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Result"><span class="toc-number">2.</span> <span class="toc-text">Result</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-number">3.</span> <span class="toc-text"> Reference</span></a></li></ol>
                     </div>
                 </span>
             </div>
