@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>A real-time analyst bias | 柘九的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Under the inspiration of the work by  Binsbergen, J.H. van, I construct a machine-leaning model to predict the net profit of A share listed company in Chine per month. The statistically optimal mach">
+  <meta name="description" content="Under the inspiration of the work by  Binsbergen, J.H. van, I construct a machine-leaning model to predict the net profit of A share listed company in China per month. The statistically optimal mach">
 <meta property="og:type" content="article">
 <meta property="og:title" content="A real-time analyst bias">
 <meta property="og:url" content="http://example.com/2021/03/18/a%20real-time%20analyst%20bias/index.html">
 <meta property="og:site_name" content="柘九的个人主页">
-<meta property="og:description" content="Under the inspiration of the work by  Binsbergen, J.H. van, I construct a machine-leaning model to predict the net profit of A share listed company in Chine per month. The statistically optimal mach">
+<meta property="og:description" content="Under the inspiration of the work by  Binsbergen, J.H. van, I construct a machine-leaning model to predict the net profit of A share listed company in China per month. The statistically optimal mach">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2021/03/18/a%20real-time%20analyst%20bias/image/cffabdcdek1b5cf37ef8cef719ece54d.jpg">
 <meta property="og:image" content="http://example.com/2021/03/18/a%20real-time%20analyst%20bias/image/8789d34act6980e58d96650c2374e1e8.jpg">
 <meta property="og:image" content="http://example.com/2021/03/18/a%20real-time%20analyst%20bias/image/cffabdcdek1b5cf37ef8cef719ece54d.jpg">
 <meta property="og:image" content="http://example.com/2021/03/18/a%20real-time%20analyst%20bias/image/a390425bdt3ba615b0c2cc2e80313eea.jpg">
 <meta property="article:published_time" content="2021-03-18T05:03:02.734Z">
-<meta property="article:modified_time" content="2021-03-20T11:17:27.593Z">
+<meta property="article:modified_time" content="2021-05-01T04:23:52.178Z">
 <meta property="article:author" content="Fangzhuo HOU">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2021/03/18/a%20real-time%20analyst%20bias/image/cffabdcdek1b5cf37ef8cef719ece54d.jpg">
@@ -194,7 +194,7 @@
       
         <meta name="referrer" content="no-referrer">
 
-<p><em><font face="Times New Roman" size="5">Under the inspiration of the work by <a color="blue"> Binsbergen, J.H. van</a>, I construct a machine-leaning model to predict the net profit of A share listed company in Chine per month. The statistically optimal machine-leaning forecast has the same trend as analysts’ consensus forecast and the smaller error. And we can use it as the benchmark to get a real-time analyst bias which has a huge research value.</font></em></p>
+<p><em><font face="Times New Roman" size="5">Under the inspiration of the work by <a color="blue"> Binsbergen, J.H. van</a>, I construct a machine-leaning model to predict the net profit of A share listed company in China per month. The statistically optimal machine-leaning forecast has the same trend as analysts’ consensus forecast and the smaller error. And we can use it as the benchmark to get a real-time analyst bias which has a huge research value.</font></em></p>
 <span id="more"></span>
 <h1 id="Methodology"><a href="#Methodology" class="headerlink" title="Methodology"></a><font size="7" color="black">Methodology</font></h1><h2 id="XGBoost"><a href="#XGBoost" class="headerlink" title="XGBoost  "></a><font size="6" color="black">XGBoost  </font></h2><font face="Times New Roman" size="4">I use XGBoost to forecast the net profit. XGBoost can be viewed as an eXtreme version of Gradient Boosting Decision Tree(GBDT) which is an iterative decision tree algorithm with the strong ability of generalization for non-linear and non-parametric problem. XGBoost consists of multiple decision trees which forecast the residual (residual value = true value - predicted value), and each predicted value for the sample is the sum of all trees:</font>
 $$
@@ -241,7 +241,7 @@ the so-called feature importance which is measured as the relative frequency of 
 $$
  Analyst\ Forecast=Public\ Signal+Private\ Signal+Biases
 $$
-<font face="Times New Roman" size="4">The public signal is the information which can be received by almost all investors while the private signal comes from funds, security brokerges, etc.(Figure 3). I devide the public signal as the Macro, Industry based on the standard of classification of CSRC and Fundamental with a maximum two-year time horizon. The private signal is the analysts' consensus forecast which is defined as the median of forecasts with a less than 1-year forecast horizon because the analyst only publish the detailed report research to forecast the net profit in the annual report in China. </font>
+<font face="Times New Roman" size="4">The public signal is the information which can be received by almost all investors while the private signal comes from funds, security brokerges, etc.(Figure 3). I devide the public signal as the Macro, Industry based on the standard of classification of CSRC and Fundamental with a maximum two-year time horizon. The analysts' consensus forecast which contains private signal is defined as the median of forecasts with a less than 1-year forecast horizon because the analyst only publish the detailed report research to forecast the net profit in the annual report in China. </font>
 
 <p><img src="/2021/03/18/a%20real-time%20analyst%20bias/image/cffabdcdek1b5cf37ef8cef719ece54d.jpg" alt></p>
 <center><font size="3">Figure 3<br>source: Yanran Wua, Tingting Liua, Liyan Hanb, Libo Yinc.,2018.,Optimistic bias of analysts' earnings forecasts: Does investor
@@ -257,7 +257,7 @@ sentiment matter in China?</font></center>
 
 <font face="Times New Roman" size="4">The resulting forecasting regression is:</font>
 $$
- E[NetProfit] = XGB[Macro,Industry,Fundamentals,Analyst]
+E[NetProfit] = XGB[Macro,Industry,Fundamentals,Analyst]
 $$
 
 # <font size="7" color="black">Data</font>
