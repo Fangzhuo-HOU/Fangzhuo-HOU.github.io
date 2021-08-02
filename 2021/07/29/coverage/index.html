@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021 | 柘九的个人主页</title>
+  <title>Shared analyst coverage | 柘九的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="柘九的个人主页">
-<meta property="og:url" content="http://example.com/archives/2021/index.html">
+  <meta name="description" content="In recent years, more people focus attention on firm links, which contains supply chain links(Cohen and Frazzini, 2008), geographic location links(Parsons et al., 2019) and technological links(Lee e">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shared analyst coverage">
+<meta property="og:url" content="http://example.com/2021/07/29/coverage/index.html">
 <meta property="og:site_name" content="柘九的个人主页">
+<meta property="og:description" content="In recent years, more people focus attention on firm links, which contains supply chain links(Cohen and Frazzini, 2008), geographic location links(Parsons et al., 2019) and technological links(Lee e">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2021/07/29/coverage/image/table1.png">
+<meta property="og:image" content="http://example.com/2021/07/29/coverage/image/figure1.png">
+<meta property="og:image" content="http://example.com/2021/07/29/coverage/image/figure2.png">
+<meta property="og:image" content="http://example.com/2021/07/29/coverage/image/joinquant%20screenshot.png">
+<meta property="article:published_time" content="2021-07-29T07:51:06.571Z">
+<meta property="article:modified_time" content="2021-08-02T11:50:56.249Z">
 <meta property="article:author" content="Fangzhuo HOU">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/07/29/coverage/image/table1.png">
   
     <link rel="alternative" href="/atom.xml" title="柘九的个人主页" type="application/atom+xml">
   
@@ -163,37 +172,87 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-coverage" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/07/29/coverage/" class="archive-article-date">
-  	<time datetime="2021-07-29T07:51:06.571Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-29</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/07/29/coverage/">Shared analyst coverage</a>
+    <h1 class="article-title" itemprop="name">
+      Shared analyst coverage
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2021/07/29/coverage/" class="archive-article-date">
+  	<time datetime="2021-07-29T07:51:06.571Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <meta name="referrer" content="no-referrer">
+
+<p><em><font face="Times New Roman" size="5">In recent years, more people focus attention on firm links, which contains supply chain links<a color="blue">(Cohen and Frazzini, 2008)</a>, geographic location links<a color="blue">(Parsons et al., 2019)</a> and technological links<a color="blue">(Lee et al.,2019)</a> and so on. In this article, we propose a new method which has a better performance on predicting to measure shared analyst coverage, following the work by <a color="blue">Ali and Hirshleifer(2020)</a>. </font></em></p>
+<span id="more"></span>
+<h3 id="Previous-method"><a href="#Previous-method" class="headerlink" title="Previous method"></a>Previous method</h3><p>Shared  Analyst coverge is the firms, which is focused by the same analyst in a period of past time.</p>
+<h3 id="Our-method"><a href="#Our-method" class="headerlink" title="Our method"></a>Our method</h3><p>We only concentrate on the firms, which is in the same research report, analysized by the same  analyst.</p>
+<p>The advantages of our method has two points:</p>
+<ul>
+<li>The relation between linked firms is more strong, because analysts put them into one research report and give their own forecasts at the same time.</li>
+<li>The measure of the relationship is more accuracy, because this way gives the firm linkage  a weight naturally. We not only assume that the relationship is stronger when two firms are reported frequently, but aslo deem the scale of analyst team has a positive effect on the strength of firm linkage.</li>
+</ul>
+<p>The we follow <a color="blue">Ali and Hirshleifer(2020)</a>‘s job to calculate connected firm return:</p>
+<script type="math/tex; mode=display">CF\ RET_{it} = \frac{1}{\sum_{j=1}^{N}n_{ij}}\sum_{j=1}^{N}n_{ij}Ret_{jt}</script><p>where $Ret_{jt}$ is the rerturn of stock $j$ during month $t$, $n_{ij}$ is the linkage weight between stock $i$ and $j$.</p>
+<h2 id="Empirical-result"><a href="#Empirical-result" class="headerlink" title="Empirical result"></a>Empirical result</h2><h3 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h3><p>The data from gogoal database we used to construct factors could be divided in to two parts: the research report of analysts and stock market data. The research report from 2016-01-01 to 2021-06-31 covers the fields of report time, report organization, analyst names and so on, it is worth mentioning that we had made sure that entrytime is equal to report time to avoid using future data. The stock market data only contains the daily stock price information about A share market including gem and SME board.</p>
+<h3 id="The-CF-momentum-effect"><a href="#The-CF-momentum-effect" class="headerlink" title="The CF momentum effect"></a>The CF momentum effect</h3><p>At the beginning of each month, we rank stocks into 5 quintiles based on CF RET and calculate equal-weighted returns of these quintile portfolios. These portfolios are rebalanced at the beginning of the month and sold at the end of the month. It is crucial that our stock pool is based on analyst coverage and we did not exclude any stock excpet not A share stocks because analysts in China only concentrate on the succeeded of promising firms. </p>
+<p> <a color="blue">Table 1</a> reports the alphas of three-factor and five-factor, and factor loadings of these portfolios. There is a strong, monotonic relation between quintile rank and future returns and alphas. The long-short portfolio that is long top-quintile and short bottom-quintile stocks generates highly signiﬁcant three-factor alphas of 8.95% ( t = 30.220 ). And even the long topest quntile stocks generates three-factor alphas of 5.66% ( t = 26.178 ). </p>
+<p><img src="/2021/07/29/coverage/image/table1.png" alt></p>
+<p> <a color="blue">Figure 1</a> plots the cumulative returns of the equal-weighted long quintile portfolios from 2016-01-01 to 2021-06-31(totally 65 months).</p>
+<p><img src="/2021/07/29/coverage/image/figure1.png" alt></p>
+<p>Considering that analysts usually analysize the firms in the same industry, the alphas should be distinct from each other among different industries. Therefore, we did the same job expect using industrial firms as  the stock pool, and the results also suggest above guesses.</p>
+<p><img src="/2021/07/29/coverage/image/figure2.png" alt></p>
+<h2 id="Backtest"><a href="#Backtest" class="headerlink" title="Backtest"></a>Backtest</h2><p>In this step, we exclude the stocks, which have the following situations:</p>
+<ul>
+<li><p>The listed time is less than one year.</p>
+</li>
+<li><p>The stock has abnormal  stock price fluctuations in recent one year.</p>
+</li>
+<li><p>The stock has been special treated.</p>
+</li>
+<li><p>The stock is not by back-door listing in renct one year and before half of one year.</p>
+</li>
+</ul>
+<p>Then we choose the stocks, which have the top 10% factor values, and calculate stock weights targeted at minimum risk based on the past one year stock market data. Finally, we tested two strategies with different factor formation period.</p>
+<p>Strategy 1:</p>
+<p>Every wednesday rebalance the portfolio based on the analyst data in the past 5 trading days.</p>
+<p>Strategy 2:</p>
+<p> At the first wednesday of each month rebalance the portfolio based on the analyst data in the past 21 trading days.</p>
+<p>The backtest platform is based on the Backtrader, PyFolio. And here can you download the backtest report and portfolio position data of these two strategies:</p>
+<p><a href="/download/Strategy1_backtest.pdf">Click to download strategy 1 backtest report</a></p>
+<p><a href="/download/Strategy1_portfolio_positions.csv">Click to download strategy 1 portfolio positions</a></p>
+<p><a href="/download/Strategy2_backtest.pdf">Click to download strategy 2 backtest report</a></p>
+<p><a href="/download/Strategy2_portfolio_positions.csv">Click to download strategy 2 portfolio positions</a></p>
+<p>Lastly, it is obvious that this method is hardly possible to use future function,and to aim at the doubt that I used the future data, I use the same function to contruct a equal weight portfilio and put it on the JoinQuant platform at 2021/07/01. The following screenshot is from JoinQuant:</p>
+<p><img src="/2021/07/29/coverage/image/joinquant screenshot.png" alt></p>
+<h2 id="Possible-improvements-and-some-other-thoughts"><a href="#Possible-improvements-and-some-other-thoughts" class="headerlink" title="Possible improvements and some other thoughts"></a>Possible improvements and some other thoughts</h2><h1 id="Reference"><a href="#Reference" class="headerlink" title=" Reference"></a><font size="7" color="black"> Reference</font></h1><p>COHEN, L., FRAZZINI, A., 2008. Economic Links and Predictable Returns. J Finance 63, 1977–2011. <a target="_blank" rel="noopener" href="https://doi.org/10.1111/j.1540-6261.2008.01379.x">https://doi.org/10.1111/j.1540-6261.2008.01379.x</a></p>
+<p>Parsons CA, Sabbatucci R, Titman S (2019) Geographic Lead-Lag Effects. Rev Financial Stud 33:4721–4770. <a target="_blank" rel="noopener" href="https://doi.org/10.1093/rfs/hhz145">https://doi.org/10.1093/rfs/hhz145</a></p>
+<p>Lee CMC, Sun ST, Wang R, Zhang R (2019) Technological links and predictable returns. J Financ Econ 132:76–96. <a target="_blank" rel="noopener" href="https://doi.org/10.1016/j.jfineco.2018.11.008">https://doi.org/10.1016/j.jfineco.2018.11.008</a></p>
+<p>Ali U, Hirshleifer D (2020) Shared analyst coverage: Unifying momentum spillover effects. J Financ Econ 136:649–675. <a target="_blank" rel="noopener" href="https://doi.org/10.1016/j.jfineco.2019.10.007">https://doi.org/10.1016/j.jfineco.2019.10.007</a></p>
+
+      
+      
+    
+      <div class="declare" hidden="hidden"></div>
+    
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -206,55 +265,66 @@
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/07/29/a%20real-time%20analyst%20bias/" class="archive-article-date">
-  	<time datetime="2021-07-29T07:45:40.576Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-29</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/07/29/a%20real-time%20analyst%20bias/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">A real-time analyst bias</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/07/29/a%20real-time%20analyst%20bias/">A real-time analyst bias</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/machine-leaning//" class="article-tag-list-link color1">machine-leaning</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Previous-method"><span class="toc-number">1.</span> <span class="toc-text">Previous method</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Our-method"><span class="toc-number">2.</span> <span class="toc-text">Our method</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Empirical-result"><span class="toc-number"></span> <span class="toc-text">Empirical result</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Data"><span class="toc-number">1.</span> <span class="toc-text">Data</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-CF-momentum-effect"><span class="toc-number">2.</span> <span class="toc-text">The CF momentum effect</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Backtest"><span class="toc-number"></span> <span class="toc-text">Backtest</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Possible-improvements-and-some-other-thoughts"><span class="toc-number"></span> <span class="toc-text">Possible improvements and some other thoughts</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-number"></span> <span class="toc-text"> Reference</span></a>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -279,8 +349,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
