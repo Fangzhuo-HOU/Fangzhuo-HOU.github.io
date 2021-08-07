@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>Shared analyst coverage | 柘九的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="In recent years, more people focus attention on firm links, which contains supply chain links(Cohen and Frazzini, 2008), geographic location links(Parsons et al., 2019) and technological links(Lee e">
+  <meta name="description" content="In recent years, more people focus attention on firm links, which contain supply chain links(Cohen and Frazzini, 2008), geographic location links(Parsons et al., 2019), and technological links(Lee e">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Shared analyst coverage">
 <meta property="og:url" content="http://example.com/2021/07/29/coverage/index.html">
 <meta property="og:site_name" content="柘九的个人主页">
-<meta property="og:description" content="In recent years, more people focus attention on firm links, which contains supply chain links(Cohen and Frazzini, 2008), geographic location links(Parsons et al., 2019) and technological links(Lee e">
+<meta property="og:description" content="In recent years, more people focus attention on firm links, which contain supply chain links(Cohen and Frazzini, 2008), geographic location links(Parsons et al., 2019), and technological links(Lee e">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2021/07/29/coverage/image/table1.png">
 <meta property="og:image" content="http://example.com/2021/07/29/coverage/image/figure1.png">
 <meta property="og:image" content="http://example.com/2021/07/29/coverage/image/figure2.png">
 <meta property="og:image" content="http://example.com/2021/07/29/coverage/image/joinquant%20screenshot.png">
 <meta property="article:published_time" content="2021-07-29T07:51:06.571Z">
-<meta property="article:modified_time" content="2021-08-05T07:18:33.086Z">
+<meta property="article:modified_time" content="2021-08-07T06:38:34.467Z">
 <meta property="article:author" content="Fangzhuo HOU">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2021/07/29/coverage/image/table1.png">
@@ -194,24 +194,24 @@
       
         <meta name="referrer" content="no-referrer">
 
-<p><em><font face="Times New Roman" size="5">In recent years, more people focus attention on firm links, which contains supply chain links<a color="blue">(Cohen and Frazzini, 2008)</a>, geographic location links<a color="blue">(Parsons et al., 2019)</a> and technological links<a color="blue">(Lee et al.,2019)</a> and so on. In this article, we propose a new method which has a better performance on predicting to measure shared analyst coverage, following the work by <a color="blue">Ali and Hirshleifer(2020)</a>. </font></em></p>
+<p><em><font face="Times New Roman" size="5">In recent years, more people focus attention on firm links, which contain supply chain links<a color="blue">(Cohen and Frazzini, 2008)</a>, geographic location links<a color="blue">(Parsons et al., 2019)</a>, and technological links<a color="blue">(Lee et al.,2019)</a> and so on. In this article, we propose a new method, which has a better performance on predicting to measure shared analyst coverage, following the work by <a color="blue">Ali and Hirshleifer(2020)</a>. What is more, we did a series of backtests to support our results.</font></em></p>
 <span id="more"></span>
-<h3 id="Previous-method"><a href="#Previous-method" class="headerlink" title="Previous method"></a>Previous method</h3><p>Shared  Analyst coverge is the firms, which is focused by the same analyst in a period of past time.</p>
-<h3 id="Our-method"><a href="#Our-method" class="headerlink" title="Our method"></a>Our method</h3><p>We only concentrate on the firms, which is in the same research report, analysized by the same  analyst.</p>
-<p>The advantages of our method has two points:</p>
+<h3 id="Previous-method"><a href="#Previous-method" class="headerlink" title="Previous method"></a>Previous method</h3><p>Shared  Analyst coverage is firms, which are focused by the same analyst on a period of past time.</p>
+<h3 id="Our-method"><a href="#Our-method" class="headerlink" title="Our method"></a>Our method</h3><p>We only concentrate on the firm, which is in the same research report, analyzed by the same  analyst.</p>
+<p>The advantages of our method have two points:</p>
 <ul>
-<li>The relation between linked firms is more strong, because analysts put them into one research report and give their own forecasts at the same time.</li>
-<li>The measure of the relationship is more accuracy, because this way gives the firm linkage  a weight naturally. We not only assume that the relationship is stronger when two firms are reported frequently, but aslo deem the scale of analyst team has a positive effect on the strength of firm linkage.</li>
+<li>The relation between linked firms is more strong because analysts put them into one research report and give their own forecasts at the same time.</li>
+<li>The measure of the relationship is more accuracy because this way gives the firm linkage  a weight naturally. We not only assume that the relationship is stronger when two firms are reported frequently, but also deem the scale of the analyst team has a positive effect on the strength of firm linkage.</li>
 </ul>
 <p>The we follow <a color="blue">Ali and Hirshleifer(2020)</a>‘s job to calculate connected firm return:</p>
 <script type="math/tex; mode=display">CF\ RET_{it} = \frac{1}{\sum_{j=1}^{N}n_{ij}}\sum_{j=1}^{N}n_{ij}Ret_{jt}</script><p>where $Ret_{jt}$ is the rerturn of stock $j$ during month $t$, $n_{ij}$ is the linkage weight between stock $i$ and $j$.</p>
-<h2 id="Empirical-result"><a href="#Empirical-result" class="headerlink" title="Empirical result"></a>Empirical result</h2><h3 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h3><p>The data from gogoal database we used to construct factors could be divided in to two parts: the research report of analysts and stock market data. The research report from 2016-01-01 to 2021-06-31 covers the fields of report time, report organization, analyst names and so on, it is worth mentioning that we had made sure that entrytime is equal to report time to avoid using future data. The stock market data only contains the daily stock price information about A share market including gem and SME board.</p>
-<h3 id="The-CF-momentum-effect"><a href="#The-CF-momentum-effect" class="headerlink" title="The CF momentum effect"></a>The CF momentum effect</h3><p>At the beginning of each month, we rank stocks into 5 quintiles based on CF RET and calculate equal-weighted returns of these quintile portfolios. These portfolios are rebalanced at the beginning of the month and sold at the end of the month. It is crucial that our stock pool is based on analyst coverage and we did not exclude any stock excpet not A share stocks because analysts in China only concentrate on the succeeded of promising firms. </p>
-<p> <a color="blue">Table 1</a> reports the alphas of three-factor and five-factor, and factor loadings of these portfolios. There is a strong, monotonic relation between quintile rank and future returns and alphas. The long-short portfolio that is long top-quintile and short bottom-quintile stocks generates highly signiﬁcant three-factor alphas of 8.95% ( t = 30.220 ). And even the long topest quntile stocks generates three-factor alphas of 5.66% ( t = 26.178 ). </p>
+<h2 id="Empirical-result"><a href="#Empirical-result" class="headerlink" title="Empirical result"></a>Empirical result</h2><h3 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h3><p>The data from gogoal database we used to construct factors could be divided into two parts: the research report of analysts and stock market data. The research report from 2016-01-01 to 2021-06-31 covers the fields of report time, report organization, analyst names and so on, it is worth mentioning that we had made sure that entrytime is equal to report time to avoid using future data. The stock market data only contains the daily stock price information about A share market including gem and SME board.</p>
+<h3 id="The-CF-momentum-effect"><a href="#The-CF-momentum-effect" class="headerlink" title="The CF momentum effect"></a>The CF momentum effect</h3><p>At the beginning of each month, we rank stocks into 5 quintiles based on CF RET and calculate equal-weighted returns of these quintile portfolios. These portfolios are rebalanced at the beginning of the month and sold at the end of the month. It is crucial that our stock pool is based on analyst coverage and we did not exclude any stock excpet not A-share stocks because analysts in China only concentrate on the succeeded of promising firms. </p>
+<p> <a color="blue">Table 1</a> reports the alphas of three-factor and five-factor, and factor loadings of these portfolios. There is a strong, monotonic relation between quintile rank and future returns and alphas. The long-short portfolio that is long top-quintile and short bottom-quintile stocks generates highly signiﬁcant three-factor alphas of 8.95% ( t = 30.220 ). And even the long topest quintile stocks generate a three-factor alpha of 5.66% ( t = 26.178 ). </p>
 <p><img src="/2021/07/29/coverage/image/table1.png" alt></p>
 <p> <a color="blue">Figure 1</a> plots the cumulative returns of the equal-weighted long quintile portfolios from 2016-01-01 to 2021-06-31(totally 65 months).</p>
 <p><img src="/2021/07/29/coverage/image/figure1.png" alt></p>
-<p>Considering that analysts usually analysize the firms in the same industry, the alphas should be distinct from each other among different industries. Therefore, we did the same job expect using industrial firms as  the stock pool, and the results also suggest above guesses.</p>
+<p>Considering that analysts usually analyze the firms in the same industry, the alphas should be distinct from each other among different industries. Therefore, we did the same job except using industrial firms as  the stock pool, and the results also suggest the above guesses.</p>
 <p><img src="/2021/07/29/coverage/image/figure2.png" alt></p>
 <h2 id="Backtest"><a href="#Backtest" class="headerlink" title="Backtest"></a>Backtest</h2><p>In this step, we exclude the stocks, which have the following situations:</p>
 <ul>
@@ -224,7 +224,7 @@
 <li><p>The stock is not by back-door listing in renct one year and before half of one year.</p>
 </li>
 </ul>
-<p>Then we choose the stocks, which have the top 10% factor values, and calculate stock weights targeted at minimum risk based on the past one year stock market data. Finally, we tested two strategies with different factor formation period.</p>
+<p>Then we choose the stocks, which have the top 10% factor values, and calculate stock weights targeted at minimum risk based on the past one-year stock market data. Finally, we tested two strategies with different factor formation periods.</p>
 <p>Strategy 1:</p>
 <p>Every wednesday rebalance the portfolio based on the analyst data in the past 5 trading days.</p>
 <p>Strategy 2:</p>
@@ -234,10 +234,10 @@
 <p><a href="/download/Strategy1_portfolio_positions.csv">Click to download strategy 1 portfolio positions</a></p>
 <p><a href="/download/Strategy2_backtest.pdf">Click to download strategy 2 backtest report</a></p>
 <p><a href="/download/Strategy2_portfolio_positions.csv">Click to download strategy 2 portfolio positions</a></p>
-<p>Lastly, it is obvious that this method is hardly possible to use future function,and to aim at the doubt that I used the future data, I use the same function to contruct a equal weight portfilio and put it on the JoinQuant platform at 2021/07/01. The following screenshot is from JoinQuant:</p>
+<p>Lastly, it is obvious that this method is hardly possible to use the future function, and to aim at the doubt that I used the future data, I use the same function to construct an equal weight portfolio and put it on the JoinQuant platform on 2021/07/01. The following screenshot is from JoinQuant:</p>
 <p><img src="/2021/07/29/coverage/image/joinquant screenshot.png" alt></p>
-<h2 id="Possible-improvements-and-some-other-thoughts"><a href="#Possible-improvements-and-some-other-thoughts" class="headerlink" title="Possible improvements and some other thoughts"></a>Possible improvements and some other thoughts</h2><p>Though strategis have shown their strength in the backtest of recent years, they can aslo be improved from servel aspects. First, the improvement of our new method proof that the linkage weight make a significant contribution to the accuracy of firm connections. Therefore, we can measure the weight of firm linkage more precisely by considerating the ability and influence of analysts or analysizing team, such as analysts’ awards recordings, analysts’ historical forecasting and so on. What’s more, the huge difference between strategy 1 and strategy 2 suggests that the average momentum formation period approaches more about 5 trading days, which means that we can optimize the formation period and detect the concrete formation period in different industries. </p>
-<p>Maybe the power of altervative data is beginning to emerge, but its prerequisite is the insight to the essencen of financial markets and  human foibles.</p>
+<h2 id="Possible-improvements-and-some-other-thoughts"><a href="#Possible-improvements-and-some-other-thoughts" class="headerlink" title="Possible improvements and some other thoughts"></a>Possible improvements and some other thoughts</h2><p>Though strategies have shown their strength in the backtest of recent years, they can also be improved from several aspects. First, the improvement of our new method proofs that the linkage weight makes a significant contribution to the accuracy of firm connections. Therefore, we can measure the weight of firm linkages more precisely by considering the ability and influences of analysts or analyzing teams, such as analysts’ awards recordings, analysts’ historical forecasting and so on. What’s more, the huge difference between strategy 1 and strategy 2 suggests that the average momentum formation period approaches more about five trading days, which means that we can optimize the formation period and detect the concrete formation period in different industries, or even the individual stock. </p>
+<p>Maybe the power of alternative data is beginning to emerge, but its prerequisite is the insight to the essence of financial markets and  human foibles.</p>
 <h1 id="Reference"><a href="#Reference" class="headerlink" title=" Reference"></a><font size="7" color="black"> Reference</font></h1><p>COHEN, L., FRAZZINI, A., 2008. Economic Links and Predictable Returns. J Finance 63, 1977–2011. <a target="_blank" rel="noopener" href="https://doi.org/10.1111/j.1540-6261.2008.01379.x">https://doi.org/10.1111/j.1540-6261.2008.01379.x</a></p>
 <p>Parsons CA, Sabbatucci R, Titman S (2019) Geographic Lead-Lag Effects. Rev Financial Stud 33:4721–4770. <a target="_blank" rel="noopener" href="https://doi.org/10.1093/rfs/hhz145">https://doi.org/10.1093/rfs/hhz145</a></p>
 <p>Lee CMC, Sun ST, Wang R, Zhang R (2019) Technological links and predictable returns. J Financ Econ 132:76–96. <a target="_blank" rel="noopener" href="https://doi.org/10.1016/j.jfineco.2018.11.008">https://doi.org/10.1016/j.jfineco.2018.11.008</a></p>
